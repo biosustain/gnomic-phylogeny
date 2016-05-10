@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -6,7 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 exports.buildPhylogeneticTree = buildPhylogeneticTree;
 exports.buildDistanceMatrix = buildDistanceMatrix;
 
-var _neighborJoining = require("neighbor-joining");
+var _neighborJoining = require('neighbor-joining');
+
+var _gnomicGrammar = require('gnomic-grammar');
 
 function buildPhylogeneticTree(taxa, gnomicGenotypes) {
     var newick = arguments.length <= 2 || arguments[2] === undefined ? false : arguments[2];
@@ -47,12 +49,12 @@ function buildDistanceMatrix(gnomicGenotypes) {
                 for (var _iterator2 = changes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
                     var change = _step2.value;
 
-                    if (change instanceof Plasmid) {
+                    if (change instanceof _gnomicGrammar.Plasmid) {
                         if (allFeatures[change.name] === undefined) {
                             allFeatures[change.name] = k++;
                         }
                         localFeatures.push(allFeatures[change.name]);
-                    } else if (change instanceof Mutation) {
+                    } else if (change instanceof _gnomicGrammar.Mutation) {
                         var del = change.before ? "del#" : "",
                             featureTree = change.before || change.after;
                         var _iteratorNormalCompletion3 = true;

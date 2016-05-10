@@ -1,6 +1,6 @@
 {
   "name": "gnomic-phylogeny",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Gnomic grammar phylogeny library for NPM",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "babel-preset-stage-1": "^6.5.0"
   },
   "dependencies": {
-    "neighbor-joining": "^1.0.0"
+    "gnomic-grammar": "^0.3.1",
+    "neighbor-joining": "^1.0.1"
   }
 }

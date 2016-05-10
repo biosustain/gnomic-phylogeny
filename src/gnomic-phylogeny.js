@@ -1,4 +1,5 @@
 import { RapidNeighborJoining, allocateSquareMatrix } from 'neighbor-joining';
+import {Mutation, Plasmid} from 'gnomic-grammar';
 
 export function buildPhylogeneticTree(taxa, gnomicGenotypes, newick=false) {
     let D = buildDistanceMatrix(gnomicGenotypes),
