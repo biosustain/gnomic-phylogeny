@@ -64,10 +64,5 @@ node_modules
 ## JSPM
 jspm_packages
 
-
-## Dist
-dist/*
-
-
 ## Temp
 tmp
