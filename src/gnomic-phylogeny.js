@@ -3,7 +3,7 @@ import {Mutation, Plasmid} from 'gnomic-grammar';
 
 export function buildPhylogeneticTree(taxa, gnomicGenotypes, newick=false) {
     let D = buildDistanceMatrix(gnomicGenotypes),
-        RNJ = new RapidNeighbourJoining(D, taxa);
+        RNJ = new RapidNeighborJoining(D, taxa);
 
     RNJ.run();
     return newick ? RNJ.getAsNewick() : RNJ.getAsObject();

@@ -14,7 +14,7 @@ function buildPhylogeneticTree(taxa, gnomicGenotypes) {
     var newick = arguments.length <= 2 || arguments[2] === undefined ? false : arguments[2];
 
     var D = buildDistanceMatrix(gnomicGenotypes),
-        RNJ = new RapidNeighbourJoining(D, taxa);
+        RNJ = new _neighborJoining.RapidNeighborJoining(D, taxa);
 
     RNJ.run();
     return newick ? RNJ.getAsNewick() : RNJ.getAsObject();
