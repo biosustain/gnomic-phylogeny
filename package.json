@@ -8,6 +8,14 @@
     "compile": "babel -d dist/ src/ --module=common",
     "prepublish": "npm run compile"
   },
+  "keywords": [
+    "gnomic",
+    "gnomic grammar",
+    "distance matrix",
+    "phylogeny",
+    "neighbor joining",
+    "biojs"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/biosustain/gnomic-phylogeny.git"
@@ -25,7 +33,7 @@
     "babel-preset-stage-1": "^6.5.0"
   },
   "dependencies": {
-    "gnomic-grammar": "^0.3.1",
-    "neighbor-joining": "^1.0.1"
+    "gnomic-grammar": "^0.3.2",
+    "neighbor-joining": "^1.0.4"
   }
 }
